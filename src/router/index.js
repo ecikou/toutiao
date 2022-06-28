@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Layout from '@/views/Layout'
+
 const Home = () => import('@/views/Home')
 const Video = () => import('@/views/Video')
 const Question = () => import('@/views/Question')
@@ -10,7 +11,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/Home',
+    path: '/',
     component: Layout,
     children: [
       { path: '/Home', component: Home },
