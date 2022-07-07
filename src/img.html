@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file"
+    id="file"
+    accept="image/jepg,image/png,image/gif,image/bmp,image/jpeg"
+    />
+
+    <script>
+        var file = document.getElementById('file');
+        file.onchange = function(){
+            console.dir(file.files[0]);
+            var reader = URL.createObjectURL(this.files[0]);
+            console.log(reader);
+            var img = document.createElement('img');
+            img.src = reader;
+            document.body.append(img);
+           
+          
+        };
+    </script>
+</body>
+</html>

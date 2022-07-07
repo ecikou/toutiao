@@ -25,3 +25,25 @@ export const getUserInfo = () => {
     }
   })
 }
+
+export const getUserProfile = () => {
+  return request({
+    url: '/user/profile'
+  })
+}
+
+export const updateUserProfile = profile => {
+  return request({
+    method: 'PATCH',
+    url: '/user/profile',
+    data: profile
+  })
+}
+
+export const updateAvatar = data => {
+  return request({
+    method: 'PATCH',
+    url: 'user/photo',
+    data
+  })
+}
